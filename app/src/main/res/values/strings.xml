@@ -1,0 +1,150 @@
+<resources>
+    <string name="app_name">TreeCare</string>
+    <string name="change_daily_goal">Change daily goal</string>
+
+    <string name="unity_shared_preferences">dal.mitacsgri.treecare.v2.playerprefs</string>
+
+    <!--Shared preferences' keys-->
+
+    <string name="daily_step_count">daily_step_count</string>
+    <string name="last_day_step_count">last_day_step_count</string>
+    <string name="daily_steps_goal">daily_goal</string>
+
+    <string name="login_done">login_done</string>
+    <!--Actually, last opened day rounded off to nearest 00:00 time-->
+    <string name="last_opened_day">last_opened_day</string>
+
+    <!--daily_goal is used to check if tree has been updated as per the goal achievement of previous day.
+    It is reset at 00:00 of every day.
+    If 0, it means daily_goal has not been checked. Always set to 0 by Android app part.
+    If 1, it means that daily_goal has been checked. It is set to 1 always by Unity-->
+    <string name="daily_goal_checked">daily_goal_checked</string>
+
+    <string name="goal_completion_streak_checked">goal_completion_streak_checked</string>
+
+    <string name="starter_mode_instructions_displayed">starter_mode_instructions_displayed</string>
+    <string name="challenger_mode_instructions_displayed">challenger_mode_instructions_displayed</string>
+    <string name="tournament_mode_instructions_displayed">tournament_mode_instructions_displayed</string>
+
+    <!--Used to check if UnityPlayerActivity is run for the first time by the userFirstName.
+    It is separate from login_done because it may happen that userFirstName logged in but didn't proceed to the tree screene
+    Always updated by Unity. Initially, it will be unset, so a value of 1 is obtained.
+    After the pref is checked once, it is set to 1 and not updated again-->
+    <string name="is_first_run">is_first_run</string>
+    <string name="leaf_count_before_today">leaf_count_before_today</string>
+    <string name="leaves_gained_today">leaves_gained_today</string>
+    <string name="goal_achieved_streak">goal_achieved_streak</string>
+    <string name="current_day">current_day</string>
+    <string name="total_fruits_on_tree">total_fruits_on_tree</string>
+    <string name="first_login_time_ms">first_login_time_ms</string>
+    <string name="last_login_time_ms">last_login_time_ms</string>
+    <string name="last_logout_time_ms">last_logout_time_ms</string>
+    <string name="last_leaf_count">last_leaf_count</string>
+    <string name="current_leaf_count">current_leaf_count</string>
+    <string name="last_fruit_count">last_fruit_count</string>
+    <string name="current_fruit_count">current_fruit_count</string>
+    <string name="current_day_of_week">current_day_of_week</string>
+    <string name="daily_goal_streak">daily_goal_streak</string>
+    <string name="daily_goal_achieved_count">daily_goal_achieved_count</string>
+    <string name="daily_goal_streak_string">daily_goal_streak_string</string>
+    <string name="user">user</string>
+    <string name="game_mode">game_mode</string>
+    <string name="challenge_type">challenge_type</string>
+    <string name="challenge_leaf_count">challenge_leaf_count</string>
+    <string name="challenge_last_leaf_count">challenge_last_leaf_count</string>
+    <string name="challenge_fruit_count">challenge_fruit_count</string>
+    <string name="challenge_goal">challenge_goal</string>
+    <string name="challenge_streak">challenge_streak</string>
+    <string name="challenge_name">challenge_name</string>
+    <string name="challenge_total_steps_count">challenge_total_steps_count</string>
+    <string name="challenge_is_active">challenge_is_active</string>
+    <string name="leaderboard_position">leaderboard_position</string>
+    <string name="daily_goal_map_fixed">daily_goal_map_fixed</string>
+
+    <!--App UI text-->
+    <string name="login_screen_quote">The more physically active you\'ll be, more flourishing will be your tree</string>
+    <string name="login_text">Please login with your Google account to proceed</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="instructions">Instructions</string>
+    <string name="select_a_mode">Select a mode</string>
+    <string name="challenger">Challenger</string>
+    <string name="starter">Starter</string>
+    <string name="tournament">Tournament</string>
+    <string name="starter_mode">Starter Mode</string>
+
+    <string name="starter_mode_instructions">This is a single player mode. Here are the rules of this mode:
+        \n\n1. Your daily goal is initially set as 5,000 steps which can be increased by you.
+        \n\n2. For every 1,000 steps taken in a day, you will gain a green leaf.
+        \n\n3. When you will fail to meet your daily goal, you will lose the number of leaves that corresponds to the remaining steps required to meet your goal.
+        \n\n4. If you will meet your daily goal consistently for a week, you will gain a fruit on your tree.
+        \n\n5. But, if you will fail to fulfill your daily goals for a week, you will lose a fruit (if any).</string>
+
+    <string name="challenger_mode_instructions">This is an individual-based competitive mode with following rules:
+        \n\n1. You compete with other player(s). The rules in the Starter Mode also apply to every player in this mode.
+        \n\n2. You can see various active challenges (created by other players) and can choose to join any of them to compete.
+        \n\n3. Alternatively, you can create your own challenge by inviting other players to compete with you.
+        \n\n4. To publicly recognize players’ efforts, there is a leaderboard that ranks top 10 players in descending order of the number of steps they took during challenge.
+        \n\n5. Every player participating in a challenge can visualize the state of the other players’ trees.
+        \n\n6. Every challenge has a timeline which is set by the organizer.</string>
+
+    <string name="continueToGame">Continue</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="your_challenges">Your challenges</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="join">Join</string>
+    <string name="challenge_description">Description</string>
+    <string name="challenge_option_daily_goal_based">Daily Goal Based</string>
+    <string name="challenge_option_aggregate_based">Aggregate based</string>
+    <string name="create">Create</string>
+    <string name="leaderboard_challenge_name">Challenge name</string>
+    <string name="challenge_finished">Challenge finished</string>
+    <string name="tournament_mode">Tournament Mode</string>
+    <string name="tournaments">Tournaments</string>
+    <string name="teams">Teams</string>
+    <string name="send_join_request">Send Join Request</string>
+    <string name="team_name_hint">Team name</string>
+    <string name="create_team_info">\u2022 You will be the captain of the new team created by you. However you can change the captain after creating the team. \n\n\u2022 You can invite other members to be the part of your team after creating the team</string>
+    <string name="invite_member">Invite Member</string>
+    <string name="join_request_sent">Join request sent</string>
+    <string name="cancel_request">Cancel Request</string>
+    <string name="join_request_cancelled">Join request cancelled</string>
+    <string name="member_requests">Member requests</string>
+    <string name="invite">Invite</string>
+    <string name="profile">Profile</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="awards">Awards</string>
+    <string name="challenger_mode">Challenger mode</string>
+    <string name="go_to_challenger_mode">Go to Challenger Mode</string>
+    <string name="streak">Streak</string>
+    <string name="progress_report">Progress Report</string>
+    <string name="settings">Settings</string>
+    <string name="change_volume">Change volume</string>
+    <string name="volume">Volume</string>
+    <string name="daily_goal">Daily Goal</string>
+    <string name="save">Save</string>
+    <string name="daily_goal_changes_are_applicable_from_the_next_day">Daily goal changes are applicable from the next day</string>
+    <string name="unsaved_changes_warning">You have unsaved changes</string>
+    <string name="warning">Warning</string>
+    <string name="log_out">Logout</string>
+    <string name="logout_message">Do you want to log out or switch accounts?</string>
+    <string name="logout_title">Logout/Switch account</string>
+    <string name="challenges">Challenges</string>
+
+    <string name="goal_completed_notification">You achieved your daily goal today. Congratulations!</string>
+    <string name="daily_goal_remaining_notification">You are %d steps away from achieving your daily goal</string>
+
+    <string name="daily_goal_notification_title1">Make every step count</string>
+    <string name="daily_goal_notification_title2">Walking is a lifestyle</string>
+    <string name="daily_goal_notification_title3">Walking is a therapy</string>
+    <string name="daily_goal_notification_title4">Good things come to those who sweat</string>
+    <string name="daily_goal_notification_title5">Habituate yourself to walk very far</string>
+    <string name="daily_goal_notification_title6">Sweat is fat crying</string>
+    <string name="daily_goal_notification_title7">It always seems impossible until its done</string>
+    <string name="daily_goal_notification_title8">Wish less, walk more</string>
+
+    <string name="profile_image_start_transition">profile_image_start_transition</string>
+    <string name="profile_image_end_transition">profile_image_end_transition</string>
+    <string name="create_challenge">Create challenge</string>
+    <string name="back">Back</string>
+    <string name="enter_a_new_name">Enter a new name</string>
+</resources>

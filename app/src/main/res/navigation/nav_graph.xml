@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="dal.mitacsgri.treecare.screens.splash.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_splashScreenFragment_to_modeSelectionFragment"
+            app:destination="@id/modeSelectionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="dal.mitacsgri.treecare.screens.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_modeSelectionFragment"
+            app:destination="@id/modeSelectionFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/modeSelectionFragment"
+        android:name="dal.mitacsgri.treecare.screens.modeselection.ModeSelectionFragment"
+        android:label="ModeSelectionFragment">
+        <action
+            android:id="@+id/action_modeSelectionFragment_to_instructionsFragment"
+            app:destination="@id/instructionsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_modeSelectionFragment_to_unityPlayerActivity"
+            app:destination="@id/unityPlayerActivity"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_modeSelectionFragment_to_challengesFragment"
+            app:destination="@id/challengesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_modeSelectionFragment_to_tournamentModeFragment"
+            app:destination="@id/tournamentModeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_modeSelectionFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment
+        android:id="@+id/instructionsFragment"
+        android:name="dal.mitacsgri.treecare.screens.instructions.InstructionsFragment"
+        android:label="InstructionsFragment">
+        <action
+            android:id="@+id/action_instructionsFragment_to_unityPlayerActivity"
+            app:destination="@id/unityPlayerActivity"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/instructionsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_instructionsFragment_to_challengesFragment"
+            app:destination="@id/challengesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/instructionsFragment"
+            app:popUpToInclusive="true"/>
+        <argument android:name="mode"
+                  app:argType="integer"/>
+        <action
+            android:id="@+id/action_instructionsFragment_to_tournamentModeFragment"
+            app:destination="@id/tournamentModeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment android:id="@+id/unityPlayerActivity"/>
+    <fragment
+        android:id="@+id/challengesFragment"
+        android:name="dal.mitacsgri.treecare.screens.challenges.ChallengesFragment"
+        android:label="fragment_challenges"
+        tools:layout="@layout/fragment_challenges">
+        <action
+            android:id="@+id/action_challengesFragment_to_createChallengeFragment"
+            app:destination="@id/createChallengeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_challengesFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/createChallengeFragment"
+        android:name="dal.mitacsgri.treecare.screens.createchallenge.CreateChallengeFragment"
+        android:label="fragment_create_challenge"
+        tools:layout="@layout/fragment_create_challenge"/>
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="dal.mitacsgri.treecare.screens.leaderboard.LeaderboardFragment"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" >
+        <argument
+            android:name="challenge_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_leaderboardFragment_to_challengeCompleteDialog"
+            app:destination="@id/challengeCompleteDialog"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <dialog
+        android:id="@+id/challengeCompleteDialog"
+        android:name="dal.mitacsgri.treecare.screens.dialog.challengecomplete.ChallengeCompleteDialog"
+        android:label="ChallengeCompleteDialog" >
+        <argument
+            android:name="position"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/tournamentModeFragment"
+        android:name="dal.mitacsgri.treecare.screens.tournamentmode.TournamentModeFragment"
+        android:label="fragment_tournament_mode"
+        tools:layout="@layout/fragment_tournament_mode" >
+        <action
+            android:id="@+id/action_tournamentModeFragment_to_tournamentsFragment"
+            app:destination="@id/tournamentsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_tournamentModeFragment_to_teamsFragment"
+            app:destination="@id/teamsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/tournamentsFragment"
+        android:name="dal.mitacsgri.treecare.screens.tournaments.TournamentsFragment"
+        android:label="fragment_tournaments"
+        tools:layout="@layout/fragment_tournaments" />
+    <fragment
+        android:id="@+id/teamsFragment"
+        android:name="dal.mitacsgri.treecare.screens.teams.TeamsFragment"
+        android:label="fragment_teams"
+        tools:layout="@layout/fragment_teams" >
+        <action
+            android:id="@+id/action_teamsFragment_to_createTeamFragment"
+            app:destination="@id/createTeamFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_teamsFragment_to_inviteMembersDialog"
+            app:destination="@id/inviteMembersDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/createTeamFragment"
+        android:name="dal.mitacsgri.treecare.screens.createteam.CreateTeamFragment"
+        android:label="fragment_create_team"
+        tools:layout="@layout/fragment_create_team" />
+    <fragment
+        android:id="@+id/inviteMembersDialog"
+        android:name="dal.mitacsgri.treecare.screens.dialog.Invitemembers.InviteMembersDialog"
+        android:label="InviteMembersDialog" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="dal.mitacsgri.treecare.screens.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_progressReportFragment"
+            app:destination="@id/progressReportFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_profileFragment_to_challengesFragment"
+            app:destination="@id/challengesFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_profileFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_editNameDialog"
+            app:destination="@id/editNameDialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/editNameDialog"
+        android:name="dal.mitacsgri.treecare.screens.dialog.editname.EditNameDialog"
+        android:label="EditNameDialog" >
+    </dialog>
+    <fragment
+        android:id="@+id/progressReportFragment"
+        android:name="dal.mitacsgri.treecare.screens.progressreport.ProgressReportFragment"
+        android:label="fragment_progress_report"
+        tools:layout="@layout/fragment_progress_report"/>
+</navigation>
